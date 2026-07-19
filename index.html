@@ -204,14 +204,13 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 <!-- TaskFlow -->
                 <div class="col-md-6 col-sm-12 mb-4">
                     <div class="card p-4 h-100" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #4fc3f7; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
-                        <h4 class="mb-2" style="color: #4fc3f7;"><i class="fa fa-cubes mr-2"></i>TaskFlow – EKS Platform</h4>
-                        <p class="mb-3" style="color: #e0e0e0;">A three-phase, production-grade Kubernetes platform on AWS EKS. Phase 1: Terraform provisioning (VPC, EKS, ECR, OIDC, ALB, ExternalDNS, ArgoCD). Phase 2: GitHub Actions CI/CD with multi-env Helm deployments. Phase 3: GitOps CD, Cognito auth, HPA, TLS, RDS, Prometheus/Grafana monitoring.</p>
-                        <p style="color: #e0e0e0;"><strong style="color:#fff;">Stack:</strong> AWS EKS · Terraform · Helm · ArgoCD · GitHub Actions · Prometheus · Grafana · RDS · Cognito</p>
+                        <h4 class="mb-2" style="color: #4fc3f7;"><i class="fa fa-cubes mr-2"></i>TaskFlow – Multi-Environment CI/CD Platform</h4>
+                        <p class="mb-3" style="color: #e0e0e0;">A production-grade GitOps delivery platform built for the TaskFlow application on AWS EKS. Provisioned all infrastructure with Terraform (VPC, EKS, ECR, OIDC, ALB, ExternalDNS, ArgoCD). Implemented a GitHub Actions CI/CD pipeline that promotes builds across dev, staging, and prod with manual approval gates, automated rollback on failed health checks, and per-stage Slack notifications. Enforced policy-as-code with OPA/conftest and secured deployments with ACM TLS, OIDC-based AWS auth, and Trivy container scanning.</p>
+                        <p style="color: #e0e0e0;"><strong style="color:#fff;">Stack:</strong> AWS EKS · Terraform · Helm · ArgoCD · GitHub Actions · OPA/Conftest · Trivy · Prometheus · Grafana</p>
                         <div class="mt-auto pt-3">
                             <a href="https://github.com/OnyiGlobal2025/taskflow-infra" target="_blank" class="btn btn-sm btn-outline-info mr-2">Infrastructure Repo</a>
                             <a href="https://github.com/OnyiGlobal2025/taskflow-app" target="_blank" class="btn btn-sm btn-outline-info mr-2">App Repo</a>
                             <a href="https://onyiglobal2025.hashnode.dev/how-i-built-a-production-style-multi-environment-ci-cd-platform-on-aws-eks" target="_blank" class="btn btn-sm btn-outline-info mr-2">Article</a>
-                            <a href="https://app.okorojeremiah.online" target="_blank" class="btn btn-sm btn-info">Live Demo</a>
                         </div>
                     </div>
                 </div>
