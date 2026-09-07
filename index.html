@@ -11,7 +11,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Onyedika Okoro – Platform Engineer & Cloud Engineer. AWS, Kubernetes, Terraform, SRE.">
+    <meta name="description" content="Onyedika Okoro – Platform Engineer & Cloud Engineer. AWS, Kubernetes, Terraform, Backstage, SRE.">
     <meta name="author" content="Onyedika Okoro">
 
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -67,11 +67,11 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 <h1 class="mb-0" style="color: #fff;">Onyedika
                     <span style="color: #fff;">Okoro</span>
                 </h1>
-                <div class="subheading mb-5" style="color: #4fc3f7;">Platform Engineer & Cloud Engineer &nbsp;·&nbsp; AWS &nbsp;·&nbsp; Kubernetes &nbsp;·&nbsp; Terraform &nbsp;·&nbsp; SRE &nbsp;·&nbsp;
+                <div class="subheading mb-5" style="color: #4fc3f7;">Platform Engineer & Cloud Engineer &nbsp;·&nbsp; AWS &nbsp;·&nbsp; Kubernetes &nbsp;·&nbsp; Terraform &nbsp;·&nbsp; Backstage &nbsp;·&nbsp; SRE &nbsp;·&nbsp;
                     <a href="mailto:onyedikaokoro8@gmail.com" style="text-transform:none; color: #4fc3f7;">onyedikaokoro8@gmail.com</a>
                 </div>
                 <p class="mb-4" style="max-width: 600px; color: #e0e0e0;">
-                    I build and operate cloud infrastructure on AWS — from zero to production. My focus is on Kubernetes platforms, GitOps pipelines, and infrastructure-as-code that teams can actually maintain. I recently delivered a full three-phase EKS platform (TaskFlow) covering Terraform provisioning, GitHub Actions CI/CD, and ArgoCD GitOps; a production-shaped observability platform built on OpenTelemetry and the Grafana LGTM stack (Loki, Tempo, Mimir) with trace-to-log correlation and SLO burn-rate alerting; and a production incident simulation lab that puts real incident response and chaos engineering into practice. I document everything I learn publicly on GitHub, Hashnode, and LinkedIn, because the best engineers make knowledge accessible.
+                    I build the paved roads other engineers ship through — self-service infrastructure, GitOps delivery, and cloud platforms that teams can actually maintain. My work centres on AWS: a multi-environment EKS delivery platform (TaskFlow) provisioned with Terraform and promoted across dev, staging, and prod through ArgoCD; an Internal Developer Portal on Backstage with a golden-path template that scaffolds a production-wired service in ninety seconds; a production-shaped observability platform on OpenTelemetry and the Grafana LGTM stack with trace-to-log correlation and SLO burn-rate alerting; and an incident simulation lab that puts real incident response and chaos engineering into practice. I document everything I learn publicly on GitHub, Hashnode, and LinkedIn — including the parts where I was wrong — because the best engineers make knowledge accessible.
                 </p>
                 <p class="mb-5" style="color: #e0e0e0;">
                     <i class="fa fa-map-marker mr-2" style="color:#4fc3f7;"></i>Nigeria &nbsp;&nbsp;
@@ -121,7 +121,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <div class="card mx-0 p-4 mb-5" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
                         <div class="resume-content mr-auto">
                             <h4 class="mb-3" style="color: #4fc3f7;"><i class="fa fa-cloud mr-3"></i> Platform Engineer & Cloud Engineer (Self-directed)</h4>
-                            <p style="color: #e0e0e0;">Designed and delivered <strong style="color:#fff;">TaskFlow</strong>, a production-grade, multi-environment Kubernetes platform on AWS EKS. Provisioned all infrastructure with Terraform (VPC, EKS, ECR, OIDC, ALB, Route 53). Built GitHub Actions CI/CD pipelines with OIDC-based auth to AWS, ArgoCD GitOps for continuous delivery across dev/staging/prod, and a full observability stack with Prometheus and Grafana. Secured with Cognito auth, ACM TLS, and HPA autoscaling. Live at <a href="https://app.okorojeremiah.online" target="_blank" style="color:#4fc3f7;">app.okorojeremiah.online</a>.</p>
+                            <p style="color: #e0e0e0;">Designed and delivered <strong style="color:#fff;">TaskFlow</strong>, a production-grade, multi-environment Kubernetes platform on AWS EKS, and the Internal Developer Portal that sits on top of it. Provisioned all infrastructure with Terraform (VPC, EKS, ECR, RDS, OIDC, ALB, Route 53). Built GitHub Actions CI/CD pipelines with OIDC-based auth to AWS, ArgoCD GitOps for continuous delivery across dev/staging/prod, and a full observability stack with Prometheus and Grafana. Added a Backstage IDP with a golden-path template, TechDocs, and live Kubernetes and ArgoCD status per service — with the portal itself delivered by ArgoCD.</p>
                         </div>
                         <div class="resume-date text-md-right">
                             <span style="color: #4fc3f7;">2025 – Present</span>
@@ -158,8 +158,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                         <div style="background: rgba(255,255,255,0.08); border-radius: 10px; padding: 24px; border: 1px solid rgba(255,255,255,0.15);">
                         <h5 style="color: #4fc3f7;" class="mb-3"><i class="fa fa-cloud mr-2"></i>Cloud & Infrastructure</h5>
                         <ul style="color: #e0e0e0;">
-                            <li>AWS (EKS, ECS Fargate, ECR, ALB, VPC, IAM, Route 53, ACM, RDS, Cognito, CloudWatch)</li>
+                            <li>AWS (EKS, ECS Fargate, ECR, ALB, VPC, IAM, Route 53, ACM, RDS, Cognito, CloudWatch, S3)</li>
                             <li>Terraform (remote state, modular IaC, S3 + DynamoDB backend)</li>
+                            <li>IRSA and EKS Pod Identity — keyless AWS access from workloads</li>
                             <li>Networking: VPC design, subnets, security groups, DNS</li>
                         </ul>
                         </div>
@@ -170,21 +171,22 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                         <ul style="color: #e0e0e0;">
                             <li>Kubernetes (EKS, Helm, HPA, topologySpreadConstraints)</li>
                             <li>Docker (multi-stage builds, image tagging discipline)</li>
-                            <li>ArgoCD (GitOps, ApplicationSets, multi-env CD)</li>
+                            <li>ArgoCD (GitOps, ApplicationSets, AppProjects, multi-env CD)</li>
                             <li>AWS ECS Fargate (task definitions, circuit breakers)</li>
                         </ul>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div style="background: rgba(255,255,255,0.08); border-radius: 10px; padding: 24px; border: 1px solid rgba(255,255,255,0.15);">
-                        <h5 style="color: #4fc3f7;" class="mb-3"><i class="fa fa-code-fork mr-2"></i>CI/CD & Observability</h5>
+                        <h5 style="color: #4fc3f7;" class="mb-3"><i class="fa fa-code-fork mr-2"></i>Developer Experience & Observability</h5>
                         <ul style="color: #e0e0e0;">
+                            <li>Backstage (software catalog, Software Templates, TechDocs, plugins)</li>
                             <li>GitHub Actions (OIDC auth, multi-env pipelines, security scanning)</li>
                             <li>OpenTelemetry (SDK + Collector: traces, logs, metrics)</li>
                             <li>Prometheus & Grafana (metrics, dashboards, alerting)</li>
                             <li>Grafana LGTM stack (Loki, Tempo, Mimir) on S3</li>
                             <li>SLO burn-rate alerting (Alertmanager → Slack + email)</li>
-                            <li>Trivy (container scanning), Semgrep (SAST)</li>
+                            <li>Trivy (container scanning), Semgrep (SAST), OPA/conftest</li>
                             <li>ExternalDNS, ALB Ingress Controller</li>
                             <li>Chaos Mesh (fault injection, chaos engineering)</li>
                         </ul>
@@ -204,6 +206,19 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <div class="mb-5 heading-border"></div>
                 </div>
 
+                <!-- Backstage Internal Developer Portal -->
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <div class="card p-4 h-100" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #9c27b0; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+                        <h4 class="mb-2" style="color: #ba68c8;"><i class="fa fa-sitemap mr-2"></i>Backstage Internal Developer Portal</h4>
+                        <p class="mb-3" style="color: #e0e0e0;">An Internal Developer Portal on AWS EKS, delivered by ArgoCD. A software catalog spanning four repositories with ownership resolved through GitHub OAuth; TechDocs built in CI and served from S3 over IRSA — the external builder pattern, so the portal never runs a docs build itself; and live Kubernetes workload status plus ArgoCD sync state on every service page. The centrepiece is a golden-path Software Template: a developer fills a form and gets a production-wired repo with a Dockerfile, Helm chart, OIDC CI, and ArgoCD delivery in ninety seconds. Backstage itself runs under ArgoCD management from its own AppProject — delivered by the same GitOps pipeline it exposes.</p>
+                        <p style="color: #e0e0e0;"><strong style="color:#fff;">Stack:</strong> Backstage · AWS EKS · Terraform · Helm · ArgoCD · GitHub Actions (OIDC) · ECR · RDS PostgreSQL · S3 · IRSA · Pod Identity</p>
+                        <div class="mt-auto pt-3">
+                            <a href="https://github.com/OnyiGlobal2025/taskflow-backstage" target="_blank" class="btn btn-sm btn-outline-light mr-2">GitHub Repo</a>
+                            <a href="https://onyiglobal2025.hashnode.dev/i-built-an-internal-developer-portal-on-eks-three-bugs-taught-me-more-than-the-build-did" target="_blank" class="btn btn-sm btn-light">Read the Write-up</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- TaskFlow -->
                 <div class="col-md-6 col-sm-12 mb-4">
                     <div class="card p-4 h-100" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #4fc3f7; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
@@ -214,6 +229,19 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                             <a href="https://github.com/OnyiGlobal2025/taskflow-infra" target="_blank" class="btn btn-sm btn-outline-info mr-2">Infrastructure Repo</a>
                             <a href="https://github.com/OnyiGlobal2025/taskflow-app" target="_blank" class="btn btn-sm btn-outline-info mr-2">App Repo</a>
                             <a href="https://onyiglobal2025.hashnode.dev/how-i-built-a-production-style-multi-environment-ci-cd-platform-on-aws-eks" target="_blank" class="btn btn-sm btn-outline-info mr-2">Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Observability Platform -->
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <div class="card p-4 h-100" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #4caf50; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+                        <h4 class="mb-2" style="color: #4caf50;"><i class="fa fa-bar-chart mr-2"></i>Full Observability Platform</h4>
+                        <p class="mb-3" style="color: #e0e0e0;">A production-shaped observability platform for a containerized service on AWS EKS. Traces, logs, and metrics flow from an OpenTelemetry-instrumented Node.js app through an OTel Collector daemonset into the Grafana LGTM stack — Loki, Tempo, and Mimir — each backed by S3. Includes trace-to-log correlation (click a log line, jump straight to its trace) and multi-window SLO burn-rate alerting following the Google SRE pattern, routed through Alertmanager to Slack and email. S3 access is keyless via EKS Pod Identity — no static credentials. Provisioned with Terraform, installed with Helm.</p>
+                        <p style="color: #e0e0e0;"><strong style="color:#fff;">Stack:</strong> AWS EKS · OpenTelemetry · Grafana · Loki · Tempo · Mimir · Alertmanager · Terraform · Helm · S3 · Pod Identity</p>
+                        <div class="mt-auto pt-3">
+                            <a href="https://github.com/OnyiGlobal2025/taskflow-observability" target="_blank" class="btn btn-sm btn-outline-success mr-2">GitHub Repo</a>
+                            <a href="https://onyiglobal2025.hashnode.dev/building-a-production-shaped-observability-platform-on-eks-opentelemetry-the-lgtm-stack-and-the-bugs-nobody-warns-you-about" target="_blank" class="btn btn-sm btn-success">Read the Write-up</a>
                         </div>
                     </div>
                 </div>
@@ -239,19 +267,6 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                         <p style="color: #e0e0e0;"><strong style="color:#fff;">Stack:</strong> AWS ECS Fargate · GitHub Actions · CloudWatch · ECR · ALB · Route 53 · Terraform</p>
                         <div class="mt-auto pt-3">
                             <a href="https://github.com/OnyiGlobal2025/dev-to-devops-handover" target="_blank" class="btn btn-sm btn-outline-warning">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Full Observability Platform -->
-                <div class="col-md-6 col-sm-12 mb-4">
-                    <div class="card p-4 h-100" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-left: 4px solid #4caf50; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
-                        <h4 class="mb-2" style="color: #4caf50;"><i class="fa fa-bar-chart mr-2"></i>Full Observability Platform</h4>
-                        <p class="mb-3" style="color: #e0e0e0;">A production-shaped observability platform for a containerized service on AWS EKS. Traces, logs, and metrics flow from an OpenTelemetry-instrumented Node.js app through an OTel Collector daemonset into the Grafana LGTM stack — Loki, Tempo, and Mimir — each backed by S3. Includes trace-to-log correlation (click a log line, jump straight to its trace) and multi-window SLO burn-rate alerting following the Google SRE pattern, routed through Alertmanager to Slack and email. S3 access is keyless via EKS Pod Identity — no static credentials. Provisioned with Terraform, installed with Helm.</p>
-                        <p style="color: #e0e0e0;"><strong style="color:#fff;">Stack:</strong> AWS EKS · OpenTelemetry · Grafana · Loki · Tempo · Mimir · Alertmanager · Terraform · Helm · S3 · Pod Identity</p>
-                        <div class="mt-auto pt-3">
-                            <a href="https://github.com/OnyiGlobal2025/taskflow-observability" target="_blank" class="btn btn-sm btn-outline-success mr-2">GitHub Repo</a>
-                            <a href="https://onyiglobal2025.hashnode.dev/building-a-production-shaped-observability-platform-on-eks-opentelemetry-the-lgtm-stack-and-the-bugs-nobody-warns-you-about" target="_blank" class="btn btn-sm btn-success">Read the Write-up</a>
                         </div>
                     </div>
                 </div>
